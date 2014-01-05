@@ -59,12 +59,18 @@ class EiffelLexer(RegexLexer):
             (r'\blocal\b', Keyword),
             (r'\belseif\b', Keyword),
             (r'\blike\b', Keyword),
+            (r'\bfrom\b', Keyword),
+            (r'\buntil\b', Keyword),
 
             # true and false
             (r'\btrue\b', Keyword),
             (r'\bfalse\b', Keyword),
 
+            (r'\[', Text),
+            (r'\]', Text),
+
             # list of all types
+            (r'\[[A-Z]+\]', Keyword.Type),
             (r'\bINTEGER\b', Keyword.Type),
             (r'\bBOOLEAN\b', Keyword.Type),
             (r'\bREAL\b', Keyword.Type),
